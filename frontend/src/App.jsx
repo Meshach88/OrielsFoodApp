@@ -23,12 +23,21 @@ const App = () => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
-  // useEffect(() => {
-  //   console.log(cartItems);
-  // }, [cartItems]);
+
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = foodList.find((product) => product._id === item);
+        totalAmount += itemInfo.price * cartItems[item];
+      }
+    }
+    return totalAmount;
+  };
+
   return (
     <>
-    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
+      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
       <div className="app">
         <StoreContext.Provider
           value={{
@@ -37,9 +46,10 @@ const App = () => {
             setCartItems,
             addToCart,
             removeFromCart,
+            getTotalCartAmount
           }}
         >
-          <Navbar setShowLogin={setShowLogin}/>
+          <Navbar setShowLogin={setShowLogin} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
