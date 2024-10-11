@@ -1,4 +1,4 @@
-# Food Delivery App
+# Oriels Food Delivery App
 
 A food delivery web application built using Vite and React, allowing users to browse a menu, add dishes to their cart, make payments via Stripe, and track their orders in real-time. The app also features an admin panel for managing dishes and tracking orders.
 
@@ -40,9 +40,9 @@ Ensure you have the following installed:
 3. Install dependencies for backend:
     npm install
 4. Set up environment variables for Stripe (create a .env file in the root directory):
-STRIPE_SECRET_KEY=your_stripe_secret_key
-JWT_SECRET = your_jwt_secret_key
-DATABASE_URL = your_database_connection_string
+STRIPE_SECRET_KEY=your_stripe_secret_key.
+JWT_SECRET = your_jwt_secret_key.
+DATABASE_URL = your_database_connection_string.
 
 5. Start the backend server:
 node server.js
