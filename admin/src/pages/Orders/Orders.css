@@ -31,6 +31,10 @@
     outline: none;
 }
 
+.order-item img {
+    width: max(10vw,40px);
+}
+
 @media (max-width:1000px) {
     .order-item{
         font-size: 12px;
