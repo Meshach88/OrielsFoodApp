@@ -47,10 +47,11 @@ import veg2 from './veg2.jpg';
 import noodles1 from './noodles1.jpg';
 import noodles5 from './noodles5.jpg';
 import noodles6 from './noodles6.jpg';
-
+import parcel_icon from './parcel_icon.png';
 
 
 export const assets = {
+  parcel_icon,
   Ologo,
   food1,
   food2,
